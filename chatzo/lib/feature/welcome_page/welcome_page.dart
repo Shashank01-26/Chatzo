@@ -20,54 +20,63 @@ class WelcomePage extends StatelessWidget {
           ),
           const SizedBox(height: 20.0),
           Expanded(
-            child: Column(
-              children: [
-                const Text(
-                  "Welcome to WhatsApp",
-                  style:TextStyle(
-                    fontSize:22,
-                    fontWeight:FontWeight.bold,
+            child: Center(
+              child: Column(
+                children: [
+                  const Text(
+                    "Welcome to WhatsApp",
+                    style:TextStyle(
+                      fontSize:22,
+                      fontWeight:FontWeight.bold,
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-                  child: RichText(
-                    textAlign: TextAlign.center,
-                      text: const TextSpan(
-                        text: "Read Our",
-                        style: TextStyle(
-                          color: Color(0xFF8696A0),
-                          height:1.5,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: "Privacy Policy",
-                            style:TextStyle(
-                              color: Color(0xFF53BDEB),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                        text: const TextSpan(
+                          text: "Read Our",
+                          style: TextStyle(
+                            color: Color(0xFF8696A0),
+                            height:1.5,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: " Privacy Policy",
+                              style:TextStyle(
+                                color: Color(0xFF53BDEB),
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: 'Tap "Agree and continue" to accept the',
-                          ),
-                          TextSpan(
-                            text: "Terms of Services",
-                          ),
-                        ]
+                            TextSpan(
+                              text: '\nTap "Agree and continue" to accept the',
+                            ),
+                            TextSpan(
+                              text: "Terms of Services",
+                            ),
+                          ]
+                        ),
+                    ),
+                  ),
+                    SizedBox(
+                      height: 42,
+                      width:MediaQuery.of(context).size.width - 200,
+                      child: ElevatedButton(
+                      onPressed: (){},
+                      style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFF00A884),
+                      foregroundColor: Color(0xFF111B21),
+                      splashFactory: NoSplash.splashFactory,
+                      elevation: 2,
+                      shadowColor: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0), // Set your desired radius here
                       ),
-                  ),
-                ),
-                  ElevatedButton(
-                  onPressed: (){},
-                  style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF00A884),
-                  foregroundColor: Color(0xFF111B21),
-                  splashFactory: NoSplash.splashFactory,
-                  elevation: 0,
-                  shadowColor: Colors.transparent,
-                  ),
-                  child: const Text("Agree and continue"),
-                 ),
-              ],
+                      ),
+                      child: const Text("Agree and continue"),
+                   ),
+                    ),
+                ],
+              ),
             ),
           )
         ],
