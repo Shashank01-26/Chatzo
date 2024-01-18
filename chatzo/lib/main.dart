@@ -1,3 +1,5 @@
+import 'package:chatzo/common/theme/dark_theme.dart';
+import 'package:chatzo/common/theme/light_theme.dart';
 import 'package:chatzo/feature/welcome_page/welcome_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: lightTheme(),
+      darkTheme: darkTheme(),
+      themeMode: ThemeMode.system,
       title: 'WhatsApp',
       home: WelcomePage(),
     );

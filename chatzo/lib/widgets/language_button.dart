@@ -1,3 +1,4 @@
+import 'package:chatzo/common/extension/custom_theme_extension.dart';
 import 'package:chatzo/common/utils/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -9,14 +10,14 @@ class LanguageSelection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Color(0xff182229),
+        color: context.theme.langBtnBgColor,
         borderRadius: BorderRadius.circular(20),
         child: InkWell(
             onTap: () {},
             borderRadius: BorderRadius.circular(20),
             splashFactory: NoSplash.splashFactory,
-            highlightColor: const Color(0xFF09141A),
-            child: const Row(
+            highlightColor: context.theme.langBtnHighlightColor,
+            child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
@@ -27,7 +28,7 @@ class LanguageSelection extends StatelessWidget {
                   Text(
                     "English",
                     style: TextStyle(
-                      color: Coloors.greyDark,
+                      color: context.theme.greyColor,
                     ),
                   ),
                   const SizedBox(width: 15),

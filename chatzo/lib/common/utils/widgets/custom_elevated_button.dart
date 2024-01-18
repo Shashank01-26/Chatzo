@@ -16,14 +16,7 @@ class CustomElevatedButton extends StatelessWidget {
       height: 42,
       width:buttonWidth ?? MediaQuery.of(context).size.width - 200,
       child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Coloors.greenDark,
-          foregroundColor: Coloors.backgroundDark,
-          splashFactory: NoSplash.splashFactory,
-          elevation: 2,
-          shadowColor: Colors.transparent,
-        ),
+        onPressed: onPressed,        
         child: Text(text),
       ),
     );

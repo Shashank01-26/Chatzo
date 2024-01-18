@@ -1,3 +1,4 @@
+import 'package:chatzo/common/extension/custom_theme_extension.dart';
 import 'package:chatzo/common/utils/colors.dart';
 import 'package:chatzo/common/utils/widgets/custom_elevated_button.dart';
 import 'package:chatzo/widgets/language_button.dart';
@@ -10,7 +11,6 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Coloors.backgroundDark,
       body: Column(
         children: [
           Expanded(
@@ -21,7 +21,7 @@ class WelcomePage extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
                 child: Image.asset(
                   'assets/images/circle.png',
-                  color: Coloors.greenDark,
+                  color: context.theme.circleImageColor,
                 ),
               ),
             ),
